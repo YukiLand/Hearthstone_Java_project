@@ -4,14 +4,16 @@ import fr.ipssi.architp1.paiement.domain.PaiementResponse;
 import fr.ipssi.architp1.paiement.domain.Product;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class PaiementController {
-    @RequestMapping(value = "/paiement", method = RequestMethod.GET)
-    public ResponseEntity<PaiementResponse> pay(Product product, String userRef) {
+    @RequestMapping(value = "/paiement/u/{userRef}", method = RequestMethod.POST)
+    public ResponseEntity<PaiementResponse> pay(@RequestBody Product product, @PathVariable String userRef) {
+        return new ResponseEntity<>( new PaiementResponse(), HttpStatus.OK);
+    }
+    @RequestMapping(value = "/paiement/i/{userRef}", method = RequestMethod.GET)
+    public ResponseEntity<PaiementResponse> pay(@PathVariable String userRef) {
         return new ResponseEntity<>( new PaiementResponse(), HttpStatus.OK);
     }
 }
