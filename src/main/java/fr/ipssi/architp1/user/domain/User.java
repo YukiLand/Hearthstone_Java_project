@@ -1,8 +1,12 @@
 package fr.ipssi.architp1.user.domain;
 
-public class User {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
-    private long ID;
+@Entity
+public class User {
+    @Id
+    private long id;
     private String nom;
     private String prenom;
     private String pseudo;
