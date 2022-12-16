@@ -1,12 +1,15 @@
 package fr.ipssi.architp1.paiement.domain;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class userInfo {
     @Id
-    private long ID;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nom;
     private String prenom;
     private String pseudo;
@@ -19,8 +22,8 @@ public class User {
 
 
 
-    public void setID(long ref) {
-        this.ID = ID;
+    public void setId(long ref) {
+        this.id = id;
     }
 
     public void setNom(String nom) {
@@ -58,8 +61,8 @@ public class User {
 
 
 
-    public long getID() {
-        return ID;
+    public long getId() {
+        return id;
     }
 
     public String getNom() {
