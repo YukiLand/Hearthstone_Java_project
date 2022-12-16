@@ -19,9 +19,9 @@ public class UserController {
         return new ResponseEntity<>( new User(), HttpStatus.OK);
     }
 
-    
+    &
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public ResponseEntity<User> userCreated(@RequestParam(required = true) String name) {
+    public ResponseEntity<User> userCreated(@RequestParam(required = true) String email, @RequestParam(required = true) String password) {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 @Entity
 public class User {
     @Id
-    private long id;
+    private long ID;
     private String nom;
     private String prenom;
     private String pseudo;
