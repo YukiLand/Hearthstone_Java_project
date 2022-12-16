@@ -16,5 +16,10 @@ public class PaiementController {
     public ResponseEntity<PaiementResponse> pay(@PathVariable String userRef) {
         return new ResponseEntity<>( new PaiementResponse(), HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/paiement/a/{ref}", method = RequestMethod.GET)
+    public ResponseEntity<PaiementResponse> payPay(@PathVariable String ref) {
+        return new ResponseEntity<>( new PaiementResponse(), HttpStatus.OK);
+    }
 }
 

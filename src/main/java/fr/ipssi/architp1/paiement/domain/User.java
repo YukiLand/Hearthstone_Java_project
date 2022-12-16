@@ -1,4 +1,4 @@
-package fr.ipssi.architp1.user.domain;
+package fr.ipssi.architp1.paiement.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
